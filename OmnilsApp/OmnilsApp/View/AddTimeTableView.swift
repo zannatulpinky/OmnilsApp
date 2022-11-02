@@ -7,9 +7,67 @@
 
 import SwiftUI
 
+let gradient4 = LinearGradient(colors: [Color.white,Color.green], startPoint: .top, endPoint: .bottom)
+
+
 struct AddTimeTableView: View {
+    @State var date = ""
+    @State var starTime = ""
+    @State var finishTime = ""
+    @State var person = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        ZStack {
+            gradient
+                .opacity(0.25)
+                .ignoresSafeArea()
+            
+            VStack() {
+                Spacer()
+                
+                Text ("Add Time Table")
+                    .foregroundColor(.black)
+                    .fontWeight(.bold)
+                    Spacer()
+                
+                TextField("Date", text: $date)
+                    .padding()
+                    .background()
+                    .cornerRadius(5.0)
+                    .padding(.bottom, 20)
+                
+                TextField("StartTime", text: $starTime)
+                    .padding()
+                    .background()
+                    .cornerRadius(5.0)
+                    .padding(.bottom, 20)
+                
+                TextField("FinishTime", text: $finishTime)
+                    .padding()
+                    .background()
+                    .cornerRadius(5.0)
+                    .padding(.bottom, 20)
+                
+                TextField("Person", text: $person)
+                    .padding()
+                    .background()
+                    .cornerRadius(5.0)
+                    .padding(.bottom, 20)
+                
+                Button(action: {
+                    
+                }, label: {
+                    Text("Save")
+                        .padding()
+                        .background(.green)
+                        .cornerRadius(5.0)
+                        .foregroundColor(.white)
+                })
+                Spacer()
+            }
+            .padding()
+        }
     }
 }
 

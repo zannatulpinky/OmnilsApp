@@ -7,9 +7,32 @@
 
 import SwiftUI
 
+let gradient3 = LinearGradient(colors: [Color.white,Color.green], startPoint: .top, endPoint: .bottom)
+
 struct TimeTableView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        ZStack {
+            gradient3
+                .opacity(0.25)
+                .ignoresSafeArea()
+            
+            VStack {
+                HStack {
+                    Text("Boka personal")
+                        .fontWeight(.bold)
+                    
+                    Button(action: {
+                        
+                    }, label: {
+                        Image(systemName: "plus.circle.fill")
+                            .foregroundColor(.black)
+                        
+                    })
+
+                }
+            }
+        }
     }
 }
 
