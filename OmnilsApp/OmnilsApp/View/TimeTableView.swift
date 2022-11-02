@@ -14,12 +14,12 @@ struct TimeTableView: View {
         
         ZStack {
             gradient3
-                .opacity(0.25)
+                .opacity(0.20)
                 .ignoresSafeArea()
             
             VStack {
                 HStack {
-                    Text("Boka personal")
+                    Text("Booking People")
                         .fontWeight(.bold)
                     
                     Button(action: {

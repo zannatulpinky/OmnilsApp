@@ -11,6 +11,7 @@ let gradient4 = LinearGradient(colors: [Color.white,Color.green], startPoint: .t
 
 
 struct AddTimeTableView: View {
+    
     @State var date = ""
     @State var starTime = ""
     @State var finishTime = ""
@@ -20,7 +21,7 @@ struct AddTimeTableView: View {
         
         ZStack {
             gradient
-                .opacity(0.25)
+                .opacity(0.20)
                 .ignoresSafeArea()
             
             VStack() {
@@ -61,6 +62,7 @@ struct AddTimeTableView: View {
                     Text("Save")
                         .padding()
                         .background(.green)
+                        .opacity(0.9)
                         .cornerRadius(5.0)
                         .foregroundColor(.white)
                 })

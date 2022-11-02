@@ -17,39 +17,41 @@ struct SignUpView: View {
     var body: some View {
         
         ZStack {
+            
             gradient1
-                .opacity(0.25)
+                .opacity(0.20)
                 .ignoresSafeArea()
             
             VStack() {
-                Spacer()
                 
-                Text ("OMNILS")
+                Text ("Resistation Page")
                     .font(.largeTitle)
-                    .foregroundColor(Color.green)
-                    .fontWeight(.heavy)
-                    Spacer()
+                    .foregroundColor(Color.black)
+                    .fontWeight(.medium)
+                    .padding(.top, 130)
                 
-                TextField("Email", text: $email)
+                TextField ("Email", text: $email)
                     .padding()
                     .background()
                     .cornerRadius(5.0)
-                    .padding(.bottom, 20)
+                    .padding(.top, 150)
                 
-                SecureField("Password", text: $password)
+                SecureField ("Password", text: $password)
                     .padding()
                     .background()
                     .cornerRadius(5.0)
-                    .padding(.bottom, 20)
+                    .padding(.top, 20)
                 
-                Button(action: {
+                Button (action: {
                     
                 }, label: {
                     Text("LogIn")
                         .padding()
                         .background(.green)
+                        .opacity(0.9)
                         .cornerRadius(5.0)
                         .foregroundColor(.white)
+                        .padding(.top, 20)
                 })
                 Spacer()
             }

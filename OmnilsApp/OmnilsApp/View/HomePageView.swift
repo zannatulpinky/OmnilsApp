@@ -14,16 +14,22 @@ struct HomePageView: View {
     var body: some View {
         ZStack{
             gradient1
-                .opacity(0.25)
+                .opacity(0.20)
                 .ignoresSafeArea()
             
             VStack {
-                
+                HStack {
+                    Image(systemName: "")
+                    Text("Köket")
+                        .fontWeight(.heavy)
+                        .padding(.top, 20)
+                }
+            
                 Image("foodImage")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width:  400, height: 180)
-                    .padding(.bottom, 350)
+                    .padding(.top, 30)
                     .cornerRadius(5.0)
                 
                 ScrollView {
@@ -31,48 +37,52 @@ struct HomePageView: View {
                         
                     }, label: {
                         
-                        Text("KOCKER")
-                            .bold()
+                        Text("KOCKAR")
+                            .fontWeight(.medium)
                             .padding()
                             .background(.white)
                             .cornerRadius(5.0)
                             .foregroundColor(.black)
+                            .padding(.top,50)
                     })
                     
                     Button(action: {
                         
                     }, label: {
                         
-                        Text("KOCKER")
-                            .bold()
+                        Text("KÖKSMÄSTARE")
+                            .fontWeight(.medium)
                             .padding()
                             .background(.white)
                             .cornerRadius(5.0)
                             .foregroundColor(.black)
+                            .padding(.top, 10)
                     })
                     
                     Button(action: {
                         
                     }, label: {
                         
-                        Text("KOCKER")
-                            .bold()
+                        Text("KÖKSBITRÄDEN")
+                            .fontWeight(.medium)
                             .padding()
                             .background(.white)
                             .cornerRadius(5.0)
                             .foregroundColor(.black)
+                            .padding(.top, 10)
                     })
                     
                     Button(action: {
                         
                     }, label: {
                         
-                        Text("KOCKER")
-                            .bold()
+                        Text("KALLSKÄNKOR")
+                            .fontWeight(.medium)
                             .padding()
                             .background(.white)
                             .cornerRadius(5.0)
                             .foregroundColor(.black)
+                            .padding(.top, 10)
                     })
                     
                     Button(action: {
@@ -82,8 +92,10 @@ struct HomePageView: View {
                             .bold()
                             .padding()
                             .background(.green)
+                            .opacity(0.9)
                             .cornerRadius(5.0)
                             .foregroundColor(.white)
+                            .padding(.top, 10)
                     })
                 }
             }
