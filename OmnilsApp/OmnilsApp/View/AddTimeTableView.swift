@@ -56,16 +56,30 @@ struct AddTimeTableView: View {
                     .cornerRadius(5.0)
                     .padding(.bottom, 20)
                 
-                Button(action: {
+                HStack {
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("Save")
+                            .padding()
+                            .background(.green)
+                            .opacity(0.9)
+                            .cornerRadius(5.0)
+                            .foregroundColor(.white)
+                    })
                     
-                }, label: {
-                    Text("Save")
-                        .padding()
-                        .background(.green)
-                        .opacity(0.9)
-                        .cornerRadius(5.0)
-                        .foregroundColor(.white)
-                })
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("Cancel")
+                            .padding()
+                            .background(.green)
+                            .opacity(0.9)
+                            .cornerRadius(5.0)
+                            .foregroundColor(.white)
+                    })
+                }
+                
                 Spacer()
             }
             .padding()

@@ -45,7 +45,7 @@ struct SignUpView: View {
                 Button (action: {
                     
                 }, label: {
-                    Text("LogIn")
+                    Text("SignUp")
                         .padding()
                         .background(.green)
                         .opacity(0.9)
@@ -53,6 +53,18 @@ struct SignUpView: View {
                         .foregroundColor(.white)
                         .padding(.top, 20)
                 })
+                
+                Button (action: {
+                    
+                }, label: {
+                    Text("Aready have account! LogIn")
+                        .padding()
+                        .foregroundColor(Color.black)
+                        .opacity(0.9)
+                        .cornerRadius(5.0)
+                        .padding(.top, 20)
+                })
+                
                 Spacer()
             }
             .padding()
