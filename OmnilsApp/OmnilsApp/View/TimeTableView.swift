@@ -19,8 +19,16 @@ struct TimeTableView: View {
             
             VStack {
                 HStack {
+                    Button(action: {
+                        
+                    }, label: {
+                        Image(systemName: "multiply.circle.fill")
+                            .foregroundColor(.black)
+                        
+                    })
                     Text("Booking People")
-                        .fontWeight(.bold)
+                        .fontWeight(.semibold)
+                    
                     
                     Button(action: {
                         

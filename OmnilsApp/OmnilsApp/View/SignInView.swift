@@ -59,10 +59,9 @@ struct SignInView: View {
                 }, label: {
                     Text("Dont have account! SignIn")
                         .padding()
-                        .background(.green)
                         .opacity(0.9)
                         .cornerRadius(5.0)
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                 })
                 Spacer()
             }

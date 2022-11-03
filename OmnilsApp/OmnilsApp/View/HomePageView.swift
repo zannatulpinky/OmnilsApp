@@ -19,7 +19,7 @@ struct HomePageView: View {
             
             VStack {
                 HStack {
-                    Image(systemName: "")
+                    Image(systemName: "keyboard_arrow_right")
                     Text("Köket")
                         .fontWeight(.heavy)
                         .padding(.top, 20)

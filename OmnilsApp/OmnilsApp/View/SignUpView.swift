@@ -59,7 +59,7 @@ struct SignUpView: View {
                 }, label: {
                     Text("Aready have account! LogIn")
                         .padding()
-                        .foregroundColor(Color.black)
+                        .foregroundColor(.black)
                         .opacity(0.9)
                         .cornerRadius(5.0)
                         .padding(.top, 20)
