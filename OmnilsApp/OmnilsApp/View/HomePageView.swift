@@ -75,7 +75,8 @@ struct HomePageView: View {
                     })
                     
                     Button(action: {
-                        
+                        viewRouter.currentPage = .TimeTable
+
                     }, label: {
                         
                         Text("KALLSKÄNKOR")
