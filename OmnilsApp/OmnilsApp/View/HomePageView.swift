@@ -11,6 +11,8 @@ let gradient2 = LinearGradient(colors: [Color.white,Color.green], startPoint: .t
 
 
 struct HomePageView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+
     var body: some View {
         ZStack{
             gradient1
@@ -86,7 +88,8 @@ struct HomePageView: View {
                     })
                     
                     Button(action: {
-                        
+                        viewRouter.currentPage = .SignIn
+
                     }, label: {
                         Text("LogOut")
                             .bold()
