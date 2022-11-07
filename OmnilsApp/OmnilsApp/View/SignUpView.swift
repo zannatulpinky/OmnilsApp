@@ -13,6 +13,7 @@ struct SignUpView: View {
     
     @State var email = ""
     @State var password = ""
+    @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
         
@@ -55,7 +56,7 @@ struct SignUpView: View {
                 })
                 
                 Button (action: {
-                    
+                    viewRouter.currentPage = .SignIn
                 }, label: {
                     Text("Aready have account! LogIn")
                         .padding()
