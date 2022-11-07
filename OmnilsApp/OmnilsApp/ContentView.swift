@@ -11,14 +11,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, Omnils!")
+        
+        switch viewRouter.currentPage {
+            
+            case .SignIn:
+               SignInView()
+            case .SignUp:
+               SignUpView()
+            case .Home:
+               HomePageView()
+            case .TimeTable:
+               TimeTableView()
+            case .AddTimeTable:
+               AddTimeTableView()
+               
         }
-        .padding()
     }
 }
 
