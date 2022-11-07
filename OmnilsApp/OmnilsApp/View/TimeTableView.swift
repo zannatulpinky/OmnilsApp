@@ -10,6 +10,8 @@ import SwiftUI
 let gradient3 = LinearGradient(colors: [Color.white,Color.green], startPoint: .top, endPoint: .bottom)
 
 struct TimeTableView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+
     var body: some View {
         
         ZStack {
@@ -20,7 +22,8 @@ struct TimeTableView: View {
             VStack {
                 HStack {
                     Button(action: {
-                        
+                        viewRouter.currentPage = .Home
+
                     }, label: {
                         Image(systemName: "multiply.circle.fill")
                             .foregroundColor(.black)
@@ -31,7 +34,8 @@ struct TimeTableView: View {
                     
                     
                     Button(action: {
-                        
+                        viewRouter.currentPage = .AddTimeTable
+
                     }, label: {
                         Image(systemName: "plus.circle.fill")
                             .foregroundColor(.black)

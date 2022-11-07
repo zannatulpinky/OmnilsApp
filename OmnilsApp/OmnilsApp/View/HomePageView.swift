@@ -36,7 +36,8 @@ struct HomePageView: View {
                 
                 ScrollView {
                     Button(action: {
-                        
+                        viewRouter.currentPage = .TimeTable
+
                     }, label: {
                         
                         Text("KOCKAR")
@@ -75,7 +76,6 @@ struct HomePageView: View {
                     })
                     
                     Button(action: {
-                        viewRouter.currentPage = .TimeTable
 
                     }, label: {
                         

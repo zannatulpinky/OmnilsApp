@@ -16,6 +16,7 @@ struct AddTimeTableView: View {
     @State var starTime = ""
     @State var finishTime = ""
     @State var person = ""
+    @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
         
@@ -58,6 +59,8 @@ struct AddTimeTableView: View {
                 
                 HStack {
                     Button(action: {
+                        viewRouter.currentPage = .TimeTable
+
                         
                     }, label: {
                         Text("Save")
@@ -69,7 +72,8 @@ struct AddTimeTableView: View {
                     })
                     
                     Button(action: {
-                        
+                        viewRouter.currentPage = .TimeTable
+
                     }, label: {
                         Text("Cancel")
                             .padding()
