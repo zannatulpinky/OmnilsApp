@@ -45,7 +45,8 @@ struct SignInView: View {
                     .padding(.bottom, 20)
                 
                 Button(action: {
-                    
+                    viewRouter.currentPage = .Home
+
                 }, label: {
                     Text("LogIn")
                         .padding()
