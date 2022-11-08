@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 let gradient2 = LinearGradient(colors: [Color.white,Color.green], startPoint: .top, endPoint: .bottom)
 
@@ -89,6 +90,12 @@ struct HomePageView: View {
                     })
                     
                     Button(action: {
+                        do {
+                            try Auth.auth().signOut()
+                        }
+                        catch let signOutError as NSError{
+                            print("Error signing out: %@", signOutError)
+                        }
                         viewRouter.currentPage = .SignIn
 
                     }, label: {

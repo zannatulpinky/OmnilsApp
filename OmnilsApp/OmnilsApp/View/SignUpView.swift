@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 let gradient1 = LinearGradient(colors: [Color.white,Color.green], startPoint: .top, endPoint: .bottom)
 
@@ -44,7 +45,14 @@ struct SignUpView: View {
                     .padding(.top, 20)
                 
                 Button (action: {
-                    
+                    Auth.auth().createUser(withEmail:email, password:password){ result, error in
+                        if error != nil {
+                            print(error?.localizedDescription ?? "")
+                        } else {
+                            print("success")
+                            viewRouter.currentPage = .Home
+                        }
+                    }
                 }, label: {
                     Text("SignUp")
                         .padding()
