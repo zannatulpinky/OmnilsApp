@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E3EDD28291ABC850009FFE1 /* TimeTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3EDD27291ABC850009FFE1 /* TimeTableModel.swift */; };
 		6E8E83292918F0E900FCE880 /* PageRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8E83282918F0E900FCE880 /* PageRoute.swift */; };
 		6E954889290EF87600EF8C27 /* OmnilsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E954888290EF87600EF8C27 /* OmnilsAppApp.swift */; };
 		6E95488B290EF87600EF8C27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E95488A290EF87600EF8C27 /* ContentView.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E3EDD27291ABC850009FFE1 /* TimeTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableModel.swift; sourceTree = "<group>"; };
 		6E8E83282918F0E900FCE880 /* PageRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageRoute.swift; sourceTree = "<group>"; };
 		6E954885290EF87600EF8C27 /* OmnilsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OmnilsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E954888290EF87600EF8C27 /* OmnilsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmnilsAppApp.swift; sourceTree = "<group>"; };
@@ -50,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E3EDD24291ABC310009FFE1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6E3EDD27291ABC850009FFE1 /* TimeTableModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		6E8E83272918F07900FCE880 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +87,7 @@
 		6E954887290EF87600EF8C27 /* OmnilsApp */ = {
 			isa = PBXGroup;
 			children = (
+				6E3EDD24291ABC310009FFE1 /* Model */,
 				6E8E83272918F07900FCE880 /* Utilities */,
 				6E954888290EF87600EF8C27 /* OmnilsAppApp.swift */,
 				6E95488A290EF87600EF8C27 /* ContentView.swift */,
@@ -190,6 +201,7 @@
 				6E9548A62911210700EF8C27 /* TimeTableView.swift in Sources */,
 				6E95488B290EF87600EF8C27 /* ContentView.swift in Sources */,
 				6E954889290EF87600EF8C27 /* OmnilsAppApp.swift in Sources */,
+				6E3EDD28291ABC850009FFE1 /* TimeTableModel.swift in Sources */,
 				6E9548A82911212F00EF8C27 /* AddTimeTableView.swift in Sources */,
 				6E9548AE2911238200EF8C27 /* SignInView.swift in Sources */,
 				6E8E83292918F0E900FCE880 /* PageRoute.swift in Sources */,

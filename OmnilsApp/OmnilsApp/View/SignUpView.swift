@@ -53,15 +53,16 @@ struct SignUpView: View {
                             viewRouter.currentPage = .Home
                         }
                     }
+               
                 }, label: {
                     Text("SignUp")
                         .padding()
-                        .background(.green)
-                        .opacity(0.9)
-                        .cornerRadius(5.0)
                         .foregroundColor(.white)
-                        .padding(.top, 20)
-                })
+                }).frame(maxWidth: .infinity,minHeight: 44)
+                    .background(.green)
+                    .opacity(0.9)
+                    .cornerRadius(5.0)
+                    .padding(.top, 20)
                 
                 Button (action: {
                     viewRouter.currentPage = .SignIn

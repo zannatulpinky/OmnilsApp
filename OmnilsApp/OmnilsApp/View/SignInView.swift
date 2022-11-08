@@ -45,6 +45,7 @@ struct SignInView: View {
                     .cornerRadius(5.0)
                     .padding(.bottom, 20)
                 
+                //
                 Button(action: {
                     Auth.auth().signIn(withEmail: email, password: password) {(result, error) in
                         if error != nil {
@@ -55,15 +56,14 @@ struct SignInView: View {
                         }
                     }
                  
-
                 }, label: {
                     Text("LogIn")
                         .padding()
-                        .background(.green)
-                        .opacity(0.9)
-                        .cornerRadius(5.0)
                         .foregroundColor(.white)
-                })
+                }).frame(maxWidth: .infinity,minHeight: 44)
+                    .background(.green)
+                    .opacity(0.9)
+                    .cornerRadius(5.0)
                 
                 Button(action: {
                     viewRouter.currentPage = .SignUp

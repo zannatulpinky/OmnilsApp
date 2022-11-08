@@ -34,8 +34,10 @@ struct HomePageView: View {
                     .frame(width:  400, height: 180)
                     .padding(.top, 30)
                     .cornerRadius(5.0)
+                    .padding(.top, 20)
                 
                 ScrollView {
+                    Spacer()
                     Button(action: {
                         viewRouter.currentPage = .TimeTable
 
@@ -44,11 +46,12 @@ struct HomePageView: View {
                         Text("KOCKAR")
                             .fontWeight(.medium)
                             .padding()
-                            .background(.white)
-                            .cornerRadius(5.0)
                             .foregroundColor(.black)
-                            .padding(.top,50)
-                    })
+                    }).frame(maxWidth: .infinity,minHeight: 44)
+                        .background(.white)
+                        .opacity(0.9)
+                        .cornerRadius(5.0)
+                        .padding(.top, 20)
                     
                     Button(action: {
                         
@@ -57,11 +60,11 @@ struct HomePageView: View {
                         Text("KÖKSMÄSTARE")
                             .fontWeight(.medium)
                             .padding()
-                            .background(.white)
-                            .cornerRadius(5.0)
                             .foregroundColor(.black)
-                            .padding(.top, 10)
-                    })
+                    }).frame(maxWidth: .infinity,minHeight: 44)
+                        .background(.white)
+                        .opacity(0.9)
+                        .cornerRadius(5.0)
                     
                     Button(action: {
                         
@@ -70,11 +73,11 @@ struct HomePageView: View {
                         Text("KÖKSBITRÄDEN")
                             .fontWeight(.medium)
                             .padding()
-                            .background(.white)
-                            .cornerRadius(5.0)
                             .foregroundColor(.black)
-                            .padding(.top, 10)
-                    })
+                    }).frame(maxWidth: .infinity,minHeight: 44)
+                        .background(.white)
+                        .opacity(0.9)
+                        .cornerRadius(5.0)
                     
                     Button(action: {
 
@@ -83,11 +86,11 @@ struct HomePageView: View {
                         Text("KALLSKÄNKOR")
                             .fontWeight(.medium)
                             .padding()
-                            .background(.white)
-                            .cornerRadius(5.0)
                             .foregroundColor(.black)
-                            .padding(.top, 10)
-                    })
+                    }).frame(maxWidth: .infinity,minHeight: 44)
+                        .background(.white)
+                        .opacity(0.9)
+                        .cornerRadius(5.0)
                     
                     Button(action: {
                         do {
@@ -102,12 +105,11 @@ struct HomePageView: View {
                         Text("LogOut")
                             .bold()
                             .padding()
-                            .background(.green)
-                            .opacity(0.9)
-                            .cornerRadius(5.0)
                             .foregroundColor(.white)
-                            .padding(.top, 10)
-                    })
+                    }).frame(maxWidth: .infinity,minHeight: 44)
+                        .background(.green)
+                        .opacity(0.9)
+                        .cornerRadius(5.0)
                 }
             }
         }
