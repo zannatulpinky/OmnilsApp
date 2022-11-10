@@ -10,11 +10,11 @@ import Firebase
 
 let gradient2 = LinearGradient(colors: [Color.white,Color.green], startPoint: .top, endPoint: .bottom)
 
-
 struct HomePageView: View {
     @EnvironmentObject var viewRouter: ViewRouter
 
     var body: some View {
+       
         ZStack{
             gradient1
                 .opacity(0.20)
@@ -22,7 +22,7 @@ struct HomePageView: View {
             
             VStack {
                 HStack {
-                    Image(systemName: "keyboard_arrow_right")
+                    
                     Text("Köket")
                         .fontWeight(.heavy)
                         .padding(.top, 20)

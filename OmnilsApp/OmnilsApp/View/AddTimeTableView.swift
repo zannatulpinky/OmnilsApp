@@ -6,9 +6,9 @@
 //
 
 import SwiftUI
+import Firebase
 
 let gradient4 = LinearGradient(colors: [Color.white,Color.green], startPoint: .top, endPoint: .bottom)
-
 
 struct AddTimeTableView: View {
     
@@ -17,6 +17,7 @@ struct AddTimeTableView: View {
     @State var finishTime = ""
     @State var person = ""
     @EnvironmentObject var viewRouter: ViewRouter
+    let db = Firestore.firestore()
     
     var body: some View {
         
@@ -31,7 +32,7 @@ struct AddTimeTableView: View {
                 Text ("Add Time Table")
                     .foregroundColor(.black)
                     .fontWeight(.bold)
-                    Spacer()
+                Spacer()
                 
                 TextField("Date", text: $date)
                     .padding()
@@ -59,8 +60,9 @@ struct AddTimeTableView: View {
                 
                 HStack {
                     Button(action: {
+                        addTimeTableToFirestore(date: date, startTime: starTime, finishTime: finishTime, person: person)
                         viewRouter.currentPage = .TimeTable
-
+                        
                         
                     }, label: {
                         Text("Save")
@@ -73,7 +75,7 @@ struct AddTimeTableView: View {
                     
                     Button(action: {
                         viewRouter.currentPage = .TimeTable
-
+                        
                     }, label: {
                         Text("Cancel")
                             .padding()
@@ -87,7 +89,21 @@ struct AddTimeTableView: View {
                 Spacer()
             }
             .padding()
+            
         }
+    }
+    
+    func addTimeTableToFirestore(date:String, startTime:String, finishTime:String, person:String) {
+        let timeTable = TimeTableModel(date: date, starTime: startTime, finishTime:finishTime, person: person)
+        db.collection("timeTable").document().setData(timeTable.dictionary){ error in
+            if error != nil {
+                print(error)
+            } else {
+                viewRouter.currentPage = .TimeTable
+            }
+            
+        }
+            
     }
 }
 

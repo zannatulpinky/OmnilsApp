@@ -1,8 +1,7 @@
 //
-//  ContentView.swift
-//  OmnilsApp
-//
-//  Created by Zannatul Pinky on 2022-10-30.
+//ContentView.swift
+//OmnilsApp
+//Created by Zannatul Pinky on 2022-10-30.
 //make github rep
 //create firebaseauth
 //create app screans

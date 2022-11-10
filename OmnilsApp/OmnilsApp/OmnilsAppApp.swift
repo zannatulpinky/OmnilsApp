@@ -1,8 +1,7 @@
 //
-//  OmnilsAppApp.swift
-//  OmnilsApp
-//
-//  Created by Zannatul Pinky on 2022-10-30.
+// OmnilsAppApp.swift
+// OmnilsApp
+// Created by Zannatul Pinky on 2022-10-30.
 //
 
 import SwiftUI

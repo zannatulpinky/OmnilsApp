@@ -9,7 +9,6 @@ import Foundation
 import Firebase
 
 
-
 enum Page {
     case SignIn
     case SignUp
