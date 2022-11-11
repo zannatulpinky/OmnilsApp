@@ -26,10 +26,10 @@ class TimeTableViewModel: ObservableObject {
                 let data = queryDocumentSnapshot.data()
                 
                 let id = queryDocumentSnapshot.documentID
-                let date = data["data"] as? String ?? ""
-                let startTime = data["startTime"] as? String ?? ""
-                let finishTime = data["FinishTime"] as? String ?? ""
-                let person = data["Person"] as? String ?? ""
+                let date = data["date"] as? String ?? ""
+                let startTime = data["starTime"] as? String ?? ""
+                let finishTime = data["finishTime"] as? String ?? ""
+                let person = data["person"] as? String ?? ""
                 
                 return TimeTableModel(id: id, date: date, starTime: startTime, finishTime: finishTime, person: person)
                 

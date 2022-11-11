@@ -13,7 +13,7 @@ let gradient4 = LinearGradient(colors: [Color.white,Color.green], startPoint: .t
 struct AddTimeTableView: View {
     
     @State var date = ""
-    @State var starTime = ""
+    @State var startTime = ""
     @State var finishTime = ""
     @State var person = ""
     @EnvironmentObject var viewRouter: ViewRouter
@@ -40,7 +40,7 @@ struct AddTimeTableView: View {
                     .cornerRadius(5.0)
                     .padding(.bottom, 20)
                 
-                TextField("StartTime", text: $starTime)
+                TextField("StartTime", text: $startTime)
                     .padding()
                     .background()
                     .cornerRadius(5.0)
@@ -60,7 +60,7 @@ struct AddTimeTableView: View {
                 
                 HStack {
                     Button(action: {
-                        addTimeTableToFirestore(date: date, startTime: starTime, finishTime: finishTime, person: person)
+                        addTimeTableToFirestore(date: date, startTime: startTime, finishTime: finishTime, person: person)
                         viewRouter.currentPage = .TimeTable
                         
                         
