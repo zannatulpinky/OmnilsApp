@@ -45,7 +45,6 @@ struct SignInView: View {
                     .cornerRadius(5.0)
                     .padding(.bottom, 20)
                 
-                //
                 Button(action: {
                     Auth.auth().signIn(withEmail: email, password: password) {(result, error) in
                         if error != nil {

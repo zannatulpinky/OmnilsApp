@@ -11,6 +11,7 @@ let gradient3 = LinearGradient(colors: [Color.white,Color.green], startPoint: .t
 
 struct TimeTableView: View {
     @EnvironmentObject var viewRouter: ViewRouter
+    @ObservedObject var viewModel = TimeTableViewModel()
 
     var body: some View {
         
@@ -43,6 +44,8 @@ struct TimeTableView: View {
                     })
 
                 }
+            }.onAppear(){
+                viewModel.fetchData()
             }
         }
     }
