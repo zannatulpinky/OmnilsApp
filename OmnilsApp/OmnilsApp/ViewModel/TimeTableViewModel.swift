@@ -16,7 +16,7 @@ class TimeTableViewModel: ObservableObject {
     private var db = Firestore.firestore()
     
     func fetchData() {
-        db.collection("timetable").addSnapshotListener { (querySnapshot, error) in
+        db.collection("timeTable").addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
                 print("No document")
                 return

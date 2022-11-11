@@ -12,7 +12,7 @@ let gradient3 = LinearGradient(colors: [Color.white,Color.green], startPoint: .t
 struct TimeTableView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     @ObservedObject var viewModel = TimeTableViewModel()
-
+    
     var body: some View {
         
         ZStack {
@@ -24,7 +24,7 @@ struct TimeTableView: View {
                 HStack {
                     Button(action: {
                         viewRouter.currentPage = .Home
-
+                        
                     }, label: {
                         Image(systemName: "multiply.circle.fill")
                             .foregroundColor(.black)
@@ -36,16 +36,45 @@ struct TimeTableView: View {
                     
                     Button(action: {
                         viewRouter.currentPage = .AddTimeTable
-
+                        
                     }, label: {
                         Image(systemName: "plus.circle.fill")
                             .foregroundColor(.black)
                         
                     })
-
+                    
                 }
-            }.onAppear(){
-                viewModel.fetchData()
+                
+                List {
+                    ForEach(viewModel.timeTable, id:  \.self) { data in
+                        VStack (alignment: .leading) {
+                            HStack {
+                                Button(action: {
+                                    
+                                }, label: {
+                                    Image(systemName: "trash.circle.fill")
+                                })
+                                
+                                VStack {
+                                    Text("Start")
+                                    Text(data.starTime)
+                                }
+                                VStack {
+                                    Text("Finish")
+                                    Text(data.finishTime)
+                                }
+                                VStack {
+                                    Text("Cock")
+                                    Text(data.person)
+                                }
+                            }
+                            
+                        }
+                    }
+                }.onAppear {
+                    viewModel.fetchData()
+                
+            }
             }
         }
     }
